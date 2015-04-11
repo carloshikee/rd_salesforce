@@ -1,0 +1,1070 @@
+[ 2015-03-30 20:58:58.2905 5543/7ff063cc3740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xZW1mdDdqL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1emft7j/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '5542', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-03-30 20:58:58.2993 5546/7f913e016740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5542/generation-0/request
+[ 2015-03-30 20:58:58.3085 5554/7fc96ccf3740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.5542/generation-0/logging
+[ 2015-03-30 20:58:58.3104 5543/7ff063cc3740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-03-30 20:59:36.3162 5546/7f913df51700 Pool2/Spawner.h:796 ]: [App 5590 stdout] 
+[ 2015-03-30 20:59:38.2580 5546/7f913df51700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-30 20:59:38.2586 5546/7f912f7fe700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs/runtimes.rb:45:in `autodetect'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:5:in `<module:ExecJS>'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:4:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `block (2 levels) in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `block in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:132:in `require'
+  /home/carlos/code/rd_salesforce/config/application.rb:7:in `<top (required)>'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `require'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-30 22:47:17.3305 5546/7f913df51700 Pool2/Spawner.h:796 ]: [App 6537 stdout] 
+[ 2015-03-30 22:47:19.2749 5546/7f913df51700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-30 22:47:19.2761 5546/7f912f7fe700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+Gemfile syntax error:
+gem omniauth-salesforce (1.0.3)
+                         ^
+/home/carlos/code/rd_salesforce/Gemfile:9: no .<digit> floating literal anymore; put 0 before dot
+gem omniauth-salesforce (1.0.3)
+                             ^
+/home/carlos/code/rd_salesforce/Gemfile:9: syntax error, unexpected tINTEGER
+gem omniauth-salesforce (1.0.3)
+                              ^ (Bundler::GemfileError)
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/dsl.rb:33:in `rescue in eval_gemfile'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/dsl.rb:29:in `eval_gemfile'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/dsl.rb:9:in `evaluate'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/definition.rb:19:in `build'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:148:in `definition'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:116:in `setup'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/setup.rb:17:in `<top (required)>'
+  /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:59:in `require'
+  /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:59:in `rescue in require'
+  /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:35:in `require'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/lib/phusion_passenger/loader_shared_helpers.rb:219:in `block in run_load_path_setup_code'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/lib/phusion_passenger/loader_shared_helpers.rb:333:in `running_bundler'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/lib/phusion_passenger/loader_shared_helpers.rb:217:in `run_load_path_setup_code'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:96:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-30 22:49:06.9285 5546/7f913df51700 Pool2/Spawner.h:796 ]: [App 6569 stdout] 
+[ 2015-03-30 22:49:07.5484 5546/7f913df51700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-30 22:49:07.5488 5546/7f912f7fe700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+It looks like Bundler could not find a gem. This is probably because your
+application is being run under a different environment than it's supposed to.
+Please check the following:
+
+ * Is this app supposed to be run as the `carlos` user?
+ * Is this app being run on the correct Ruby interpreter? Below you will
+   see which Ruby interpreter Phusion Passenger attempted to use.
+ * Are you using RVM? Please check whether the correct gemset is being used.
+ * If all of the above fails, try resetting your RVM gemsets:
+   https://github.com/phusion/passenger/wiki/Resetting-RVM-gemsets
+
+-------- The exception is as follows: -------
+Could not find gem 'omniauth-oauth2 (~> 1.0) ruby' in the gems available on this machine. (Bundler::GemNotFound)
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/resolver.rb:296:in `resolve'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/resolver.rb:168:in `start'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/resolver.rb:129:in `block in resolve'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/resolver.rb:128:in `catch'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/resolver.rb:128:in `resolve'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/definition.rb:179:in `resolve'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/definition.rb:114:in `specs'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/definition.rb:159:in `specs_for'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/definition.rb:148:in `requested_specs'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/environment.rb:18:in `requested_specs'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:13:in `setup'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:120:in `setup'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/setup.rb:17:in `<top (required)>'
+  /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:59:in `require'
+  /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:59:in `rescue in require'
+  /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:35:in `require'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/lib/phusion_passenger/loader_shared_helpers.rb:219:in `block in run_load_path_setup_code'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/lib/phusion_passenger/loader_shared_helpers.rb:333:in `running_bundler'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/lib/phusion_passenger/loader_shared_helpers.rb:217:in `run_load_path_setup_code'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:96:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-30 22:51:40.1742 6907/7f8109608740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS40dzk3ZW8vdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.4w97eo/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '6906', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-03-30 22:51:40.1882 6910/7f9d2c448740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.6906/generation-0/request
+[ 2015-03-30 22:51:40.1982 6916/7fb832a7f740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.6906/generation-0/logging
+[ 2015-03-30 22:51:40.1999 6907/7f8109608740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-03-30 22:51:42.2679 6910/7f9d2c383700 Pool2/Spawner.h:796 ]: [App 6951 stdout] 
+[ 2015-03-30 22:51:44.7494 6910/7f9d2c383700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-30 22:51:44.7497 6910/7f9d2a22f700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs/runtimes.rb:45:in `autodetect'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:5:in `<module:ExecJS>'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:4:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `block (2 levels) in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `block in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:132:in `require'
+  /home/carlos/code/rd_salesforce/config/application.rb:7:in `<top (required)>'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `require'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-30 22:51:44.9038 6910/7f9d2c383700 Pool2/Spawner.h:796 ]: [App 6971 stdout] 
+[ 2015-03-30 22:51:46.3668 6910/7f9d2c383700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-30 22:51:46.3671 6910/7f9d2a22f700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs/runtimes.rb:45:in `autodetect'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:5:in `<module:ExecJS>'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:4:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `block (2 levels) in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `block in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:132:in `require'
+  /home/carlos/code/rd_salesforce/config/application.rb:7:in `<top (required)>'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `require'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-31 21:17:01.9558 8732/7f5e771f4740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xaWQ4YnQ3L3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1id8bt7/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '8728', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-03-31 21:17:02.3171 8742/7f8234090740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.8728/generation-0/request
+[ 2015-03-31 21:17:02.9292 8747/7fb39b2a7740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.8728/generation-0/logging
+[ 2015-03-31 21:17:02.9299 8732/7f5e771f4740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-03-31 21:19:17.7588 8742/7f8233fcb700 Pool2/Spawner.h:796 ]: [App 8847 stdout] 
+[ 2015-03-31 21:19:19.6134 8742/7f8233fcb700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-31 21:19:19.6138 8742/7f8231e77700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs/runtimes.rb:45:in `autodetect'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:5:in `<module:ExecJS>'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:4:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `block (2 levels) in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `block in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:132:in `require'
+  /home/carlos/code/rd_salesforce/config/application.rb:7:in `<top (required)>'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `require'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-31 21:19:50.7039 8742/7f8233fcb700 Pool2/Spawner.h:796 ]: [App 8882 stdout] 
+[ 2015-03-31 21:19:52.1953 8742/7f8233fcb700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-31 21:19:52.1964 8742/7f8231e77700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs/runtimes.rb:45:in `autodetect'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:5:in `<module:ExecJS>'
+  /var/lib/gems/1.9.1/gems/execjs-2.4.0/lib/execjs.rb:4:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee_script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-script-2.3.0/lib/coffee-script.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `require'
+  /var/lib/gems/1.9.1/gems/coffee-rails-3.2.2/lib/coffee-rails.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:72:in `block (2 levels) in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:70:in `block in require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `each'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler/runtime.rb:59:in `require'
+  /var/lib/gems/1.9.1/gems/bundler-1.3.5/lib/bundler.rb:132:in `require'
+  /home/carlos/code/rd_salesforce/config/application.rb:7:in `<top (required)>'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `require'
+  /home/carlos/code/rd_salesforce/config/environment.rb:2:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-31 21:29:45.5986 9242/7f5cffed5740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xZWd6MzE5L3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1egz319/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '9241', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-03-31 21:29:45.6104 9245/7fdd1bc6b740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.9241/generation-0/request
+[ 2015-03-31 21:29:45.6783 9254/7f75519d0740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.9241/generation-0/logging
+[ 2015-03-31 21:29:45.6792 9242/7f5cffed5740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-03-31 21:29:50.1747 9245/7fdd1bba6700 Pool2/Spawner.h:796 ]: [App 9296 stdout] 
+[ 2015-03-31 21:29:54.3612 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-03-31 21:29:54.3614 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-03-31 21:29:54.3614 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-03-31 21:29:54.3614 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-03-31 21:29:54.3615 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-03-31 21:29:54.3615 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr] 
+[ 2015-03-31 21:29:54.3615 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-03-31 21:29:54.3616 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9296 stderr] 
+[ 2015-03-31 21:29:54.7790 9245/7fdd1bba6700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-03-31 21:29:54.7796 9245/7fdd19a52700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+/home/carlos/code/rd_salesforce/config/routes.rb:2: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `block in load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/routes_reloader.rb:40:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/file_update_checker.rb:78:in `call'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/file_update_checker.rb:78:in `execute'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application/finisher.rb:66:in `block in <module:Finisher>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/carlos/code/rd_salesforce/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-03-31 21:30:14.7572 9245/7fdd1bba6700 Pool2/Spawner.h:796 ]: [App 9333 stdout] 
+[ 2015-03-31 21:30:17.7757 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-03-31 21:30:17.7758 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-03-31 21:30:17.7758 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-03-31 21:30:17.7758 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-03-31 21:30:17.7758 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-03-31 21:30:17.7758 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr] 
+[ 2015-03-31 21:30:17.7758 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-03-31 21:30:17.7758 9245/7fdd1bb65700 Pool2/Spawner.h:160 ]: [App 9333 stderr] 
+[ 2015-03-31 21:30:17.9415 9245/7fdd1bba6700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 9333, listening on unix:/tmp/passenger.1.0.9241/generation-0/backends/preloader.9333
+[ 2015-03-31 21:44:55.9780 10232/7f6d5a05a740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xNHhnYnFiL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.14xgbqb/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '10231', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-03-31 21:44:55.9867 10235/7fae946cd740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.10231/generation-0/request
+[ 2015-03-31 21:44:55.9957 10241/7f06a6d7a740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.10231/generation-0/logging
+[ 2015-03-31 21:44:55.9966 10232/7f6d5a05a740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-03-31 21:45:00.7032 10235/7fae94608700 Pool2/Spawner.h:796 ]: [App 10280 stdout] 
+[ 2015-03-31 21:45:04.5313 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-03-31 21:45:04.5314 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-03-31 21:45:04.5314 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-03-31 21:45:04.5315 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-03-31 21:45:04.5315 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-03-31 21:45:04.5315 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr] 
+[ 2015-03-31 21:45:04.5315 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-03-31 21:45:04.5316 10235/7fae945c7700 Pool2/Spawner.h:160 ]: [App 10280 stderr] 
+[ 2015-03-31 21:45:04.7248 10235/7fae94608700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 10280, listening on unix:/tmp/passenger.1.0.10231/generation-0/backends/preloader.10280
+[ 2015-03-31 22:07:56.0120 11670/7febe486f740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS45eTExNy90ZW1wX2Rpcl90b3VjaGVyLnBpZA==', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.9y117/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '11669', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-03-31 22:07:56.0209 11673/7f662117e740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.11669/generation-0/request
+[ 2015-03-31 22:07:56.0374 11678/7ff3b7b3b740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.11669/generation-0/logging
+[ 2015-03-31 22:07:56.0392 11670/7febe486f740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-03-31 22:08:00.6621 11673/7f66210b9700 Pool2/Spawner.h:796 ]: [App 11718 stdout] 
+[ 2015-03-31 22:08:06.8354 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-03-31 22:08:06.8355 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-03-31 22:08:06.8355 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-03-31 22:08:06.8355 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-03-31 22:08:06.8356 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-03-31 22:08:06.8356 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr] 
+[ 2015-03-31 22:08:06.8356 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-03-31 22:08:06.8356 11673/7f6621078700 Pool2/Spawner.h:160 ]: [App 11718 stderr] 
+[ 2015-03-31 22:08:07.0661 11673/7f66210b9700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 11718, listening on unix:/tmp/passenger.1.0.11669/generation-0/backends/preloader.11718
+[ 2015-03-31 22:25:01.1244 12430/7fe603637740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS5od2FzdTIvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.hwasu2/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '12429', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-03-31 22:25:01.1536 12433/7f102f7f5740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.12429/generation-0/request
+[ 2015-03-31 22:25:01.1968 12439/7f90049fa740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.12429/generation-0/logging
+[ 2015-03-31 22:25:01.1976 12430/7fe603637740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-03-31 22:25:22.1822 12433/7f102f730700 Pool2/Spawner.h:796 ]: [App 12498 stdout] 
+[ 2015-03-31 22:25:27.8527 12433/7f102f6ef700 Pool2/Spawner.h:160 ]: [App 12498 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-03-31 22:25:27.8529 12433/7f102f6ef700 Pool2/Spawner.h:160 ]: [App 12498 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-03-31 22:25:27.8530 12433/7f102f6ef700 Pool2/Spawner.h:160 ]: [App 12498 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-03-31 22:25:27.8531 12433/7f102f6ef700 Pool2/Spawner.h:160 ]: [App 12498 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-03-31 22:25:27.8532 12433/7f102f6ef700 Pool2/Spawner.h:160 ]: [App 12498 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-03-31 22:25:27.8533 12433/7f102f6ef700 Pool2/Spawner.h:160 ]: [App 12498 stderr] 
+[ 2015-03-31 22:25:27.8533 12433/7f102f6ef700 Pool2/Spawner.h:160 ]: [App 12498 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-03-31 22:25:27.8534 12433/7f102f6ef700 Pool2/Spawner.h:152 ]: [App 12498 stderr] 
+[ 2015-03-31 22:25:28.1047 12433/7f102f730700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 12498, listening on unix:/tmp/passenger.1.0.12429/generation-0/backends/preloader.12498
+[ 2015-03-31 23:15:21.1226 12433/7f102f69d700 Pool2/Implementation.cpp:1291 ]: [App 12519 stdout] display=page&immediate=false&scope=api%20id%20refresh_token
+[ 2015-03-31 23:15:21.1231 12433/7f102f69d700 Pool2/Implementation.cpp:1280 ]: [App 12519 stdout] 
+[ 2015-04-09 21:14:59.0416 3661/7fba97083740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xOTJ3ZnNqL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.192wfsj/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '3660', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-04-09 21:14:59.3658 3664/7fd7134a8740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.3660/generation-0/request
+[ 2015-04-09 21:15:00.1140 3669/7f99e160f740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.3660/generation-0/logging
+[ 2015-04-09 21:15:00.1147 3661/7fba97083740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-04-09 21:15:06.2095 3664/7fd7133c2700 Pool2/Spawner.h:796 ]: [App 3711 stdout] 
+[ 2015-04-09 21:15:17.2198 3664/7fd713381700 Pool2/Spawner.h:160 ]: [App 3711 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-04-09 21:15:17.2200 3664/7fd713381700 Pool2/Spawner.h:160 ]: [App 3711 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-04-09 21:15:17.2200 3664/7fd713381700 Pool2/Spawner.h:160 ]: [App 3711 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-04-09 21:15:17.2200 3664/7fd713381700 Pool2/Spawner.h:160 ]: [App 3711 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-04-09 21:15:17.2202 3664/7fd713381700 Pool2/Spawner.h:160 ]: [App 3711 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-04-09 21:15:17.2203 3664/7fd713381700 Pool2/Spawner.h:160 ]: [App 3711 stderr] 
+[ 2015-04-09 21:15:17.2204 3664/7fd713381700 Pool2/Spawner.h:160 ]: [App 3711 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-04-09 21:15:17.2205 3664/7fd713381700 Pool2/Spawner.h:152 ]: [App 3711 stderr] 
+[ 2015-04-09 21:15:17.5973 3664/7fd7133c2700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 3711, listening on unix:/tmp/passenger.1.0.3660/generation-0/backends/preloader.3711
+[ 2015-04-09 21:58:17.5114 5079/7f9960e3a740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xMnZuYml4L3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.12vnbix/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '5078', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-04-09 21:58:17.5201 5082/7f20f3dd7740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5078/generation-0/request
+[ 2015-04-09 21:58:17.5580 5090/7f0afc27f740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.5078/generation-0/logging
+[ 2015-04-09 21:58:17.5588 5079/7f9960e3a740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-04-09 21:58:23.8380 5082/7f20f3cf1700 Pool2/Spawner.h:796 ]: [App 5126 stdout] 
+[ 2015-04-09 21:58:29.8219 5082/7f20f3cf1700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-04-09 21:58:29.8243 5082/7f20f23e0700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+cannot load such file -- omniauth/oauth (LoadError)
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /home/carlos/code/rd_salesforce/lib/forcedotcom.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /home/carlos/code/rd_salesforce/config/initializers/omniauth.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `block in load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/carlos/code/rd_salesforce/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-04-09 22:02:19.3919 5197/7f67b3dcf740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS55cXFxMGUvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.yqqq0e/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '5196', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-04-09 22:02:19.4001 5200/7fc71b9fa740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5196/generation-0/request
+[ 2015-04-09 22:02:19.4089 5205/7f7d0c0c8740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.5196/generation-0/logging
+[ 2015-04-09 22:02:19.4105 5197/7f67b3dcf740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-04-09 22:02:20.9271 5200/7fc71b935700 Pool2/Spawner.h:796 ]: [App 5241 stdout] 
+[ 2015-04-09 22:02:26.8474 5200/7fc71b935700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-04-09 22:02:26.8480 5200/7fc7197e1700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+cannot load such file -- omniauth/oauth2 (LoadError)
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /home/carlos/code/rd_salesforce/lib/forcedotcom.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /home/carlos/code/rd_salesforce/config/initializers/omniauth.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `block in load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/carlos/code/rd_salesforce/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+Assertion failed! ext/common/MultiLibeio.cpp:58: Passenger::Data::Data(const Passenger::SafeLibevPtr&, const boost::function<void(eio_req)>&): _libev != __null
+[ pid=5200, timestamp=1428627746 ] Process aborted! signo=SIGABRT(6), reason=SI_TKILL, signal sent by PID 5200 with UID 1000, si_addr=0x3d800001450, randomSeed=1428627739
+[ pid=5200 ] Crash log dumped to /var/tmp/passenger-crash-log.1428627746
+[ pid=5200 ] Date, uname and ulimits:
+Qui Abr  9 22:02:27 BRT 2015
+Linux 3.2.0-32-generic #51-Ubuntu SMP Wed Sep 26 21:33:09 UTC 2012 x86_64 x86_64
+time(seconds)        unlimited
+file(blocks)         unlimited
+data(kbytes)         unlimited
+stack(kbytes)        8192
+coredump(blocks)     0
+memory(kbytes)       unlimited
+locked memory(kbytes) 64
+process              28964
+nofiles              1024
+vmemory(kbytes)      unlimited
+locks                unlimited
+[ pid=5200 ] Phusion Passenger version: 4.0.25
+[ pid=5200 ] Last assertion failure: (_libev != __null), function Passenger::Data::Data(const Passenger::SafeLibevPtr&, const boost::function<void(eio_req)>&), file ext/common/MultiLibeio.cpp, line 58.
+[ pid=5200 ] libc backtrace available!
+--------------------------------------
+[ pid=5200 ] Backtrace with 36 frames:
+Using backtrace sanitizer.
+PassengerHelperAgent(dumpBacktrace at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:537) [0x59a7d5]
+PassengerHelperAgent(runInSubprocessWithTimeLimit at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:380) [0x59a0f7]
+PassengerHelperAgent(dumpDiagnostics at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:726) [0x59b25c]
+PassengerHelperAgent(abortHandler at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:963) [0x59beeb]
+/lib/x86_64-linux-gnu/libpthread.so.0(?? at ??:0; +0xfcb0) [0x7fc71b5eecb0]
+/lib/x86_64-linux-gnu/libc.so.6(?? at ??:0; gsignal+0x35) [0x7fc71a83b425]
+/lib/x86_64-linux-gnu/libc.so.6(?? at ??:0; abort+0x17b) [0x7fc71a83eb8b]
+PassengerHelperAgent(Passenger::installAbortHandler() at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:1063) [0x59c17e]
+PassengerHelperAgent(Data at /srv/passenger_autobuilder/repos/passenger/main/ext/common/MultiLibeio.cpp:59) [0x4ee346]
+PassengerHelperAgent(Passenger::MultiLibeio::open(char const*, int, unsigned int, int, boost::function<void (eio_req)> const&) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/MultiLibeio.cpp:158) [0x48ee70]
+PassengerHelperAgent(Passenger::FileBackedPipe::addToBuffer(char const*, unsigned long) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/FileBackedPipe.h:276) [0x4d43ce]
+PassengerHelperAgent(Passenger::FileBackedPipe::write(char const*, unsigned long) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/FileBackedPipe.h:646) [0x4d6b3b]
+PassengerHelperAgent(Passenger::RequestHandler::writeErrorResponse(boost::shared_ptr<Passenger::Client> const&, Passenger::StaticString const&, Passenger::SpawnException const*) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/RequestHandler.h:775) [0x4db0fc]
+PassengerHelperAgent(Passenger::RequestHandler::writeSpawnExceptionErrorResponse(boost::shared_ptr<Passenger::Client> const&, boost::shared_ptr<Passenger::SpawnException> const&) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/RequestHandler.h:2000) [0x4e7226]
+PassengerHelperAgent(Passenger::RequestHandler::sessionCheckedOut_real(boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/RequestHandler.h:1965) [0x4e6a2a]
+PassengerHelperAgent(boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>::operator()(Passenger::RequestHandler*, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&) const at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/mem_fn_template.hpp:393) [0x5590c4]
+PassengerHelperAgent(void boost::_bi::list4<boost::_bi::value<Passenger::RequestHandler*>, boost::_bi::value<boost::shared_ptr<Passenger::Client> >, boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Session> >, boost::_bi::value<boost::shared_ptr<oxt::tracable_exception> > >::operator()<boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>, boost::_bi::list0>(boost::_bi::type<void>, boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>&, boost::_bi::list0&, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind.hpp:457) [0x553679]
+PassengerHelperAgent(boost::_bi::bind_t<void, boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>, boost::_bi::list4<boost::_bi::value<Passenger::RequestHandler*>, boost::_bi::value<boost::shared_ptr<Passenger::Client> >, boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Session> >, boost::_bi::value<boost::shared_ptr<oxt::tracable_exception> > > >::operator()() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind_template.hpp:21) [0x54ac35]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>, boost::_bi::list4<boost::_bi::value<Passenger::RequestHandler*>, boost::_bi::value<boost::shared_ptr<Passenger::Client> >, boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Session> >, boost::_bi::value<boost::shared_ptr<oxt::tracable_exception> > > >, void>::invoke(boost::detail::function::function_buffer&) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:154) [0x541623]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:768) [0x4f62c9]
+PassengerHelperAgent(Passenger::SafeLibev::runCommands() at /srv/passenger_autobuilder/repos/passenger/main/ext/common/SafeLibev.h:87) [0x493c36]
+PassengerHelperAgent(Passenger::SafeLibev::asyncHandler(ev_loop*, ev_async*, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/SafeLibev.h:73) [0x493adc]
+PassengerHelperAgent(ev_invoke_pending at /srv/passenger_autobuilder/repos/passenger/main/ext/libev/ev.c:2989) [0x5ca331]
+PassengerHelperAgent(ev_run at /srv/passenger_autobuilder/repos/passenger/main/ext/libev/ev.c:3396) [0x5cb1fc]
+PassengerHelperAgent(startBackgroundLoop at /srv/passenger_autobuilder/repos/passenger/main/ext/common/BackgroundEventLoop.cpp:61) [0x48df66]
+PassengerHelperAgent(void boost::_bi::list1<boost::_bi::value<Passenger::BackgroundEventLoop*> >::operator()<void (*)(Passenger::BackgroundEventLoop*), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(Passenger::BackgroundEventLoop*), boost::_bi::list0&, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind.hpp:254) [0x554131]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(Passenger::BackgroundEventLoop*), boost::_bi::list1<boost::_bi::value<Passenger::BackgroundEventLoop*> > >::operator()() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind_template.hpp:21) [0x54b96b]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, void (*)(Passenger::BackgroundEventLoop*), boost::_bi::list1<boost::_bi::value<Passenger::BackgroundEventLoop*> > >, void>::invoke(boost::detail::function::function_buffer&) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:154) [0x54257d]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:768) [0x4f62c9]
+PassengerHelperAgent(oxt::thread::thread_main(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>) at /srv/passenger_autobuilder/repos/passenger/main/ext/oxt/implementation.cpp:351) [0x5c01f0]
+PassengerHelperAgent(void boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > >::operator()<void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0&, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind.hpp:313) [0x560682]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > >::operator()() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind_template.hpp:21) [0x55ff19]
+PassengerHelperAgent(boost::detail::thread_data<boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > > >::run() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/thread/detail/thread.hpp:118) [0x55f18c]
+PassengerHelperAgent(thread_proxy at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/libs/thread/src/pthread/thread.cpp:164) [0x5bac62]
+/lib/x86_64-linux-gnu/libpthread.so.0(?? at ??:0; +0x7e9a) [0x7fc71b5e6e9a]
+/lib/x86_64-linux-gnu/libc.so.6(?? at ??:0; clone+0x6d) [0x7fc71a8f93fd]
+--------------------------------------
+[ pid=5200 ] Dumping additional diagnostical information...
+--------------------------------------
+### Request handler state
+1 clients:
+  Client 21:
+    host                        = localhost:3000
+    uri                         = /salesforce
+    connected at                = 2015-04-09 22:02:24 (4 sec ago)
+    state                       = CHECKING_OUT_SESSION
+    session                     = NULL
+    requestBodyIsBuffered       = false
+    contentLength               = -1
+    clientBodyAlreadyRead       = 0
+    clientInput                 = 0x7fc700009640 fd=21, state=LIVE, buffer(0)="", paused=1, socketPaused=1, nextTickInstalled=0, generation=2, error=0
+    clientInput started         = false
+    clientBodyBuffer started    = false
+    clientBodyBuffer reachedEnd = false
+    clientOutputPipe started    = true
+    clientOutputPipe reachedEnd = false
+    clientOutputWatcher active  = false
+    appInput                    = 0x7fc70000b710 fd=-1, state=LIVE, buffer(0)="", paused=1, socketPaused=1, nextTickInstalled=0, generation=1, error=0
+    appInput started            = false
+    appInput reachedEnd         = false
+    responseHeaderSeen          = false
+    useUnionStation             = false
+
+### Pool state (simple)
+----------- General information -----------
+Max pool size : 6
+Processes     : 0
+Requests in top-level queue : 0
+
+----------- Application groups -----------
+/home/carlos/code/rd_salesforce#default:
+  App root: /home/carlos/code/rd_salesforce
+  Requests in queue: 0
+
+
+### Pool state (XML)
+<?xml version="1.0" encoding="iso8859-1" ?>
+<info version="2"><process_count>0</process_count><max>6</max><utilization>0</utilization><get_wait_list_size>0</get_wait_list_size><get_wait_list></get_wait_list><supergroups><supergroup><name>/home/carlos/code/rd_salesforce</name><state>READY</state><get_wait_list_size>0</get_wait_list_size><utilization>0</utilization><secret>QXVma37ZfOabrw387jZaWO3AEc4ueIQhkzR0CegXnsc</secret><group default="true"><name>/home/carlos/code/rd_salesforce&#35;default</name><component_name>default</component_name><app_root>/home/carlos/code/rd_salesforce</app_root><app_type>rack</app_type><environment>development</environment><enabled_process_count>0</enabled_process_count><disabling_process_count>0</disabling_process_count><disabled_process_count>0</disabled_process_count><utilization>0</utilization><get_wait_list_size>0</get_wait_list_size><disable_wait_list_size>0</disable_wait_list_size><secret>BaH4VZyCuQt0N7qNZpUx286PfkP5cXfKnZ6J3GZwLfH</secret><life_status>ALIVE</life_status><options><app_root>/home/carlos/code/rd_salesforce</app_root><app_group_name>/home/carlos/code/rd_salesforce</app_group_name><app_type>rack</app_type><start_command>/usr/bin/ruby1.9.1&#9;/var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-loader.rb</start_command><startup_file>config.ru</startup_file><process_title>Passenger RackApp</process_title><log_level>0</log_level><start_timeout>90000</start_timeout><environment>development</environment><base_uri>/</base_uri><spawn_method>smart</spawn_method><user>carlos</user><default_user>carlos</default_user><default_group>carlos</default_group><ruby>/usr/bin/ruby1.9.1</ruby><python>python</python><nodejs>node</nodejs><logging_agent_address>unix:/tmp/passenger.1.0.5196/generation-0/logging</logging_agent_address><logging_agent_username>logging</logging_agent_username><logging_agent_password>X5AbnrKjLvpxfD3ik0n1UgzVUrLUJzQV54C02pUx7Nx5C23pQt6X8mhjKa7u4b3T</logging_agent_password><debugger>false</debugger><analytics>false</analytics><group_secret>BaH4VZyCuQt0N7qNZpUx286PfkP5cXfKnZ6J3GZwLfH</group_secret><min_processes>1</min_processes><max_preloader_idle_time>-1</max_preloader_idle_time><max_out_of_band_work_instances>1</max_out_of_band_work_instances></options><processes></processes></group></supergroup></supergroups></info>
+
+### Backtraces
+Thread 'Main thread' (0x7fc71b9fa740, LWP 5200):
+     in 'void Server::mainLoop()' (Main.cpp:557)
+
+Thread 'MultiLibeio dispatcher' (0x7fc71ba1b700, LWP 5200):
+     (empty)
+
+Thread 'Pool garbage collector' (0x7fc71b9b7700, LWP 5200):
+     in 'static void Passenger::ApplicationPool2::Pool::garbageCollect(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:553)
+
+Thread 'Pool analytics collector' (0x7fc71b9f8700, LWP 5200):
+     in 'static void Passenger::ApplicationPool2::Pool::collectAnalytics(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:686)
+
+Thread 'Pool event loop' (0x7fc719fe2700, LWP 5200):
+     (empty)
+
+Thread 'MessageServer thread' (0x7fc71a003700, LWP 5200):
+     in 'void Passenger::MessageServer::mainLoop()' (MessageServer.h:558)
+
+Thread 'Request event loop' (0x7fc7197e1700, LWP 5200):
+     (empty)
+
+--------------------------------------
+[ pid=5200 ] Open files and file descriptors:
+COMMAND    PID   USER   FD   TYPE             DEVICE SIZE/OFF    NODE NAME
+Passenger 5200 carlos  cwd    DIR                7,0     1024  664722 /home/carlos/code/rd_salesforce
+Passenger 5200 carlos  rtd    DIR                7,0     1024       2 /
+Passenger 5200 carlos  txt    REG                7,0 13863285  298013 /home/carlos/.passenger/standalone/4.0.25/support-x86_64-linux/agents/PassengerHelperAgent
+Passenger 5200 carlos  mem    REG                7,0    52120 2113583 /lib/x86_64-linux-gnu/libnss_files-2.15.so
+Passenger 5200 carlos  mem    REG                7,0    47680 2113591 /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+Passenger 5200 carlos  mem    REG                7,0    97248 2113607 /lib/x86_64-linux-gnu/libnsl-2.15.so
+Passenger 5200 carlos  mem    REG                7,0    35680 2113579 /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+Passenger 5200 carlos  mem    REG                7,0  1815224 2113575 /lib/x86_64-linux-gnu/libc-2.15.so
+Passenger 5200 carlos  mem    REG                7,0    88384  205964 /lib/x86_64-linux-gnu/libgcc_s.so.1
+Passenger 5200 carlos  mem    REG                7,0  1030512 2113597 /lib/x86_64-linux-gnu/libm-2.15.so
+Passenger 5200 carlos  mem    REG                7,0   962656   17860 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+Passenger 5200 carlos  mem    REG                7,0    31752 2113589 /lib/x86_64-linux-gnu/librt-2.15.so
+Passenger 5200 carlos  mem    REG                7,0   135366 2113593 /lib/x86_64-linux-gnu/libpthread-2.15.so
+Passenger 5200 carlos  mem    REG                7,0   149280 2113599 /lib/x86_64-linux-gnu/ld-2.15.so
+Passenger 5200 carlos    0r   CHR                1,3      0t0    5788 /dev/null
+Passenger 5200 carlos    1w  FIFO                0,8      0t0   41847 pipe
+Passenger 5200 carlos    2w  FIFO                0,8      0t0   41847 pipe
+Passenger 5200 carlos    3u  unix 0x0000000000000000      0t0   41732 socket
+Passenger 5200 carlos    5w  FIFO                0,8      0t0   41847 pipe
+Passenger 5200 carlos    8u  0000                0,9        0    5763 anon_inode
+Passenger 5200 carlos    9u  0000                0,9        0    5763 anon_inode
+Passenger 5200 carlos   10u  0000                0,9        0    5763 anon_inode
+Passenger 5200 carlos   11u  0000                0,9        0    5763 anon_inode
+Passenger 5200 carlos   12u  0000                0,9        0    5763 anon_inode
+Passenger 5200 carlos   13r  FIFO                0,8      0t0   41752 pipe
+Passenger 5200 carlos   14w  FIFO                0,8      0t0   41752 pipe
+Passenger 5200 carlos   15u  unix 0x0000000000000000      0t0   41753 /tmp/passenger.1.0.5196/generation-0/request
+Passenger 5200 carlos   16u  unix 0x0000000000000000      0t0   41754 /tmp/passenger.1.0.5196/generation-0/helper_admin
+Passenger 5200 carlos   17r   CHR                1,9      0t0    5793 /dev/urandom
+Passenger 5200 carlos   18r   CHR                1,9      0t0    5793 /dev/urandom
+Passenger 5200 carlos   20u  unix 0x0000000000000000      0t0   42649 /tmp/passenger.1.0.5196/generation-0/request
+Passenger 5200 carlos   21u  unix 0x0000000000000000      0t0   42656 /tmp/passenger.1.0.5196/generation-0/request
+--------------------------------------
+[ pid=5200 ] Dumping a more detailed backtrace with crash-watch...
+Crash-watch is not installed. Please install it with 'gem install crash-watch' or download it from https://github.com/FooBarWidget/crash-watch.
+[ 2015-04-09 22:02:28.8640 5197/7f67b3d8c700 agents/Watchdog/AgentWatcher.cpp:96 ]: Phusion Passenger helper agent (pid=5200) crashed with signal SIGABRT, restarting it...
+2015/04/09 22:02:28 [error] 5216#0: *7 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET /salesforce HTTP/1.1", upstream: "passenger:/tmp/passenger.1.0.5196/generation-0/request:", host: "localhost:3000"
+[ 2015-04-09 22:02:28.8696 5294/7ff2968af740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5196/generation-0/request
+[ 2015-04-09 22:02:31.8454 5294/7ff2967c9700 Pool2/Spawner.h:796 ]: [App 5319 stdout] 
+[ 2015-04-09 22:02:37.7953 5294/7ff2967c9700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-04-09 22:02:37.7956 5294/7ff28ffff700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+cannot load such file -- omniauth/oauth2 (LoadError)
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /home/carlos/code/rd_salesforce/lib/forcedotcom.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `block in require'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:251:in `require'
+  /home/carlos/code/rd_salesforce/config/initializers/omniauth.rb:1:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `block in load'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:236:in `load_dependency'
+  /var/lib/gems/1.9.1/gems/activesupport-3.2.8/lib/active_support/dependencies.rb:245:in `load'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/carlos/code/rd_salesforce/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-04-09 22:03:01.7808 5294/7ff2967c9700 Pool2/Spawner.h:796 ]: [App 5349 stdout] 
+[ 2015-04-09 22:03:07.7060 5294/7ff2967c9700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-04-09 22:03:07.7064 5294/7ff28ffff700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+uninitialized constant OmniauthDemo (NameError)
+  /home/carlos/code/rd_salesforce/config/initializers/secret_token.rb:9:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/carlos/code/rd_salesforce/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+Assertion failed! ext/common/MultiLibeio.cpp:58: Passenger::Data::Data(const Passenger::SafeLibevPtr&, const boost::function<void(eio_req)>&): _libev != __null
+[ pid=5294, timestamp=1428627787 ] Process aborted! signo=SIGABRT(6), reason=SI_TKILL, signal sent by PID 5294 with UID 1000, si_addr=0x3d80000140d, randomSeed=1428627748
+[ pid=5294 ] Crash log dumped to /var/tmp/passenger-crash-log.1428627787
+[ pid=5294 ] Date, uname and ulimits:
+Qui Abr  9 22:03:07 BRT 2015
+Linux 3.2.0-32-generic #51-Ubuntu SMP Wed Sep 26 21:33:09 UTC 2012 x86_64 x86_64
+time(seconds)        unlimited
+file(blocks)         unlimited
+data(kbytes)         unlimited
+stack(kbytes)        8192
+coredump(blocks)     0
+memory(kbytes)       unlimited
+locked memory(kbytes) 64
+process              28964
+nofiles              1024
+vmemory(kbytes)      unlimited
+locks                unlimited
+[ pid=5294 ] Phusion Passenger version: 4.0.25
+[ pid=5294 ] Last assertion failure: (_libev != __null), function Passenger::Data::Data(const Passenger::SafeLibevPtr&, const boost::function<void(eio_req)>&), file ext/common/MultiLibeio.cpp, line 58.
+[ pid=5294 ] libc backtrace available!
+--------------------------------------
+[ pid=5294 ] Backtrace with 36 frames:
+Using backtrace sanitizer.
+PassengerHelperAgent(dumpBacktrace at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:537) [0x59a7d5]
+PassengerHelperAgent(runInSubprocessWithTimeLimit at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:380) [0x59a0f7]
+PassengerHelperAgent(dumpDiagnostics at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:726) [0x59b25c]
+PassengerHelperAgent(abortHandler at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:963) [0x59beeb]
+/lib/x86_64-linux-gnu/libpthread.so.0(?? at ??:0; +0xfcb0) [0x7ff2964a3cb0]
+/lib/x86_64-linux-gnu/libc.so.6(?? at ??:0; gsignal+0x35) [0x7ff2956f0425]
+/lib/x86_64-linux-gnu/libc.so.6(?? at ??:0; abort+0x17b) [0x7ff2956f3b8b]
+PassengerHelperAgent(Passenger::installAbortHandler() at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/Base.cpp:1063) [0x59c17e]
+PassengerHelperAgent(Data at /srv/passenger_autobuilder/repos/passenger/main/ext/common/MultiLibeio.cpp:59) [0x4ee346]
+PassengerHelperAgent(Passenger::MultiLibeio::open(char const*, int, unsigned int, int, boost::function<void (eio_req)> const&) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/MultiLibeio.cpp:158) [0x48ee70]
+PassengerHelperAgent(Passenger::FileBackedPipe::addToBuffer(char const*, unsigned long) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/FileBackedPipe.h:276) [0x4d43ce]
+PassengerHelperAgent(Passenger::FileBackedPipe::write(char const*, unsigned long) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/FileBackedPipe.h:646) [0x4d6b3b]
+PassengerHelperAgent(Passenger::RequestHandler::writeErrorResponse(boost::shared_ptr<Passenger::Client> const&, Passenger::StaticString const&, Passenger::SpawnException const*) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/RequestHandler.h:775) [0x4db0fc]
+PassengerHelperAgent(Passenger::RequestHandler::writeSpawnExceptionErrorResponse(boost::shared_ptr<Passenger::Client> const&, boost::shared_ptr<Passenger::SpawnException> const&) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/RequestHandler.h:2000) [0x4e7226]
+PassengerHelperAgent(Passenger::RequestHandler::sessionCheckedOut_real(boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/agents/HelperAgent/RequestHandler.h:1965) [0x4e6a2a]
+PassengerHelperAgent(boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>::operator()(Passenger::RequestHandler*, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&) const at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/mem_fn_template.hpp:393) [0x5590c4]
+PassengerHelperAgent(void boost::_bi::list4<boost::_bi::value<Passenger::RequestHandler*>, boost::_bi::value<boost::shared_ptr<Passenger::Client> >, boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Session> >, boost::_bi::value<boost::shared_ptr<oxt::tracable_exception> > >::operator()<boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>, boost::_bi::list0>(boost::_bi::type<void>, boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>&, boost::_bi::list0&, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind.hpp:457) [0x553679]
+PassengerHelperAgent(boost::_bi::bind_t<void, boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>, boost::_bi::list4<boost::_bi::value<Passenger::RequestHandler*>, boost::_bi::value<boost::shared_ptr<Passenger::Client> >, boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Session> >, boost::_bi::value<boost::shared_ptr<oxt::tracable_exception> > > >::operator()() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind_template.hpp:21) [0x54ac35]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, boost::_mfi::mf3<void, Passenger::RequestHandler, boost::shared_ptr<Passenger::Client>, boost::shared_ptr<Passenger::ApplicationPool2::Session> const&, boost::shared_ptr<oxt::tracable_exception> const&>, boost::_bi::list4<boost::_bi::value<Passenger::RequestHandler*>, boost::_bi::value<boost::shared_ptr<Passenger::Client> >, boost::_bi::value<boost::shared_ptr<Passenger::ApplicationPool2::Session> >, boost::_bi::value<boost::shared_ptr<oxt::tracable_exception> > > >, void>::invoke(boost::detail::function::function_buffer&) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:154) [0x541623]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:768) [0x4f62c9]
+PassengerHelperAgent(Passenger::SafeLibev::runCommands() at /srv/passenger_autobuilder/repos/passenger/main/ext/common/SafeLibev.h:87) [0x493c36]
+PassengerHelperAgent(Passenger::SafeLibev::asyncHandler(ev_loop*, ev_async*, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/common/SafeLibev.h:73) [0x493adc]
+PassengerHelperAgent(ev_invoke_pending at /srv/passenger_autobuilder/repos/passenger/main/ext/libev/ev.c:2989) [0x5ca331]
+PassengerHelperAgent(ev_run at /srv/passenger_autobuilder/repos/passenger/main/ext/libev/ev.c:3396) [0x5cb1fc]
+PassengerHelperAgent(startBackgroundLoop at /srv/passenger_autobuilder/repos/passenger/main/ext/common/BackgroundEventLoop.cpp:61) [0x48df66]
+PassengerHelperAgent(void boost::_bi::list1<boost::_bi::value<Passenger::BackgroundEventLoop*> >::operator()<void (*)(Passenger::BackgroundEventLoop*), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(Passenger::BackgroundEventLoop*), boost::_bi::list0&, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind.hpp:254) [0x554131]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(Passenger::BackgroundEventLoop*), boost::_bi::list1<boost::_bi::value<Passenger::BackgroundEventLoop*> > >::operator()() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind_template.hpp:21) [0x54b96b]
+PassengerHelperAgent(boost::detail::function::void_function_obj_invoker0<boost::_bi::bind_t<void, void (*)(Passenger::BackgroundEventLoop*), boost::_bi::list1<boost::_bi::value<Passenger::BackgroundEventLoop*> > >, void>::invoke(boost::detail::function::function_buffer&) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:154) [0x54257d]
+PassengerHelperAgent(boost::function0<void>::operator()() const at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/function/function_template.hpp:768) [0x4f62c9]
+PassengerHelperAgent(oxt::thread::thread_main(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>) at /srv/passenger_autobuilder/repos/passenger/main/ext/oxt/implementation.cpp:351) [0x5c01f0]
+PassengerHelperAgent(void boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > >::operator()<void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0>(boost::_bi::type<void>, void (*&)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list0&, int) at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind.hpp:313) [0x560682]
+PassengerHelperAgent(boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > >::operator()() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/bind/bind_template.hpp:21) [0x55ff19]
+PassengerHelperAgent(boost::detail::thread_data<boost::_bi::bind_t<void, void (*)(boost::function<void ()>, boost::shared_ptr<oxt::thread_local_context>), boost::_bi::list2<boost::_bi::value<boost::function<void ()> >, boost::_bi::value<boost::shared_ptr<oxt::thread_local_context> > > > >::run() at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/thread/detail/thread.hpp:118) [0x55f18c]
+PassengerHelperAgent(thread_proxy at /srv/passenger_autobuilder/repos/passenger/main/ext/boost/libs/thread/src/pthread/thread.cpp:164) [0x5bac62]
+/lib/x86_64-linux-gnu/libpthread.so.0(?? at ??:0; +0x7e9a) [0x7ff29649be9a]
+/lib/x86_64-linux-gnu/libc.so.6(?? at ??:0; clone+0x6d) [0x7ff2957ae3fd]
+--------------------------------------
+[ pid=5294 ] Dumping additional diagnostical information...
+--------------------------------------
+### Request handler state
+1 clients:
+  Client 21:
+    host                        = localhost:3000
+    uri                         = /salesforce
+    connected at                = 2015-04-09 22:03:03 (4 sec ago)
+    state                       = CHECKING_OUT_SESSION
+    session                     = NULL
+    requestBodyIsBuffered       = false
+    contentLength               = -1
+    clientBodyAlreadyRead       = 0
+    clientInput                 = 0x7ff27800a330 fd=21, state=LIVE, buffer(0)="", paused=1, socketPaused=1, nextTickInstalled=0, generation=2, error=0
+    clientInput started         = false
+    clientBodyBuffer started    = false
+    clientBodyBuffer reachedEnd = false
+    clientOutputPipe started    = true
+    clientOutputPipe reachedEnd = false
+    clientOutputWatcher active  = false
+    appInput                    = 0x7ff27800c400 fd=-1, state=LIVE, buffer(0)="", paused=1, socketPaused=1, nextTickInstalled=0, generation=1, error=0
+    appInput started            = false
+    appInput reachedEnd         = false
+    responseHeaderSeen          = false
+    useUnionStation             = false
+
+### Pool state (simple)
+----------- General information -----------
+Max pool size : 6
+Processes     : 0
+Requests in top-level queue : 0
+
+----------- Application groups -----------
+/home/carlos/code/rd_salesforce#default:
+  App root: /home/carlos/code/rd_salesforce
+  Requests in queue: 0
+
+
+### Pool state (XML)
+<?xml version="1.0" encoding="iso8859-1" ?>
+<info version="2"><process_count>0</process_count><max>6</max><utilization>0</utilization><get_wait_list_size>0</get_wait_list_size><get_wait_list></get_wait_list><supergroups><supergroup><name>/home/carlos/code/rd_salesforce</name><state>READY</state><get_wait_list_size>0</get_wait_list_size><utilization>0</utilization><secret>E6Yo7cxiXc1HX4JItX0VSWLaleO91v9upiTFB9SFyGh</secret><group default="true"><name>/home/carlos/code/rd_salesforce&#35;default</name><component_name>default</component_name><app_root>/home/carlos/code/rd_salesforce</app_root><app_type>rack</app_type><environment>development</environment><enabled_process_count>0</enabled_process_count><disabling_process_count>0</disabling_process_count><disabled_process_count>0</disabled_process_count><utilization>0</utilization><get_wait_list_size>0</get_wait_list_size><disable_wait_list_size>0</disable_wait_list_size><secret>8GpGndbejxDLJP24Znnnp2kCe04OWMSeDNNcN0fjktx</secret><life_status>ALIVE</life_status><options><app_root>/home/carlos/code/rd_salesforce</app_root><app_group_name>/home/carlos/code/rd_salesforce</app_group_name><app_type>rack</app_type><start_command>/usr/bin/ruby1.9.1&#9;/var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-loader.rb</start_command><startup_file>config.ru</startup_file><process_title>Passenger RackApp</process_title><log_level>0</log_level><start_timeout>90000</start_timeout><environment>development</environment><base_uri>/</base_uri><spawn_method>smart</spawn_method><user>carlos</user><default_user>carlos</default_user><default_group>carlos</default_group><ruby>/usr/bin/ruby1.9.1</ruby><python>python</python><nodejs>node</nodejs><logging_agent_address>unix:/tmp/passenger.1.0.5196/generation-0/logging</logging_agent_address><logging_agent_username>logging</logging_agent_username><logging_agent_password>X5AbnrKjLvpxfD3ik0n1UgzVUrLUJzQV54C02pUx7Nx5C23pQt6X8mhjKa7u4b3T</logging_agent_password><debugger>false</debugger><analytics>false</analytics><group_secret>8GpGndbejxDLJP24Znnnp2kCe04OWMSeDNNcN0fjktx</group_secret><min_processes>1</min_processes><max_preloader_idle_time>-1</max_preloader_idle_time><max_out_of_band_work_instances>1</max_out_of_band_work_instances></options><processes></processes></group></supergroup></supergroups></info>
+
+### Backtraces
+Thread 'Main thread' (0x7ff2968af740, LWP 5294):
+     in 'void Server::mainLoop()' (Main.cpp:557)
+
+Thread 'MultiLibeio dispatcher' (0x7ff2968d0700, LWP 5294):
+     (empty)
+
+Thread 'Pool event loop' (0x7ff294eb8700, LWP 5294):
+     (empty)
+
+Thread 'Pool garbage collector' (0x7ff29686c700, LWP 5294):
+     in 'static void Passenger::ApplicationPool2::Pool::garbageCollect(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:553)
+
+Thread 'MessageServer thread' (0x7ff29682b700, LWP 5294):
+     in 'void Passenger::MessageServer::mainLoop()' (MessageServer.h:558)
+
+Thread 'Pool analytics collector' (0x7ff2968ad700, LWP 5294):
+     in 'static void Passenger::ApplicationPool2::Pool::collectAnalytics(Passenger::ApplicationPool2::PoolPtr)' (Pool.h:686)
+
+Thread 'Request event loop' (0x7ff28ffff700, LWP 5294):
+     (empty)
+
+--------------------------------------
+[ pid=5294 ] Open files and file descriptors:
+COMMAND    PID   USER   FD   TYPE             DEVICE SIZE/OFF    NODE NAME
+Passenger 5294 carlos  cwd    DIR                7,0     1024  664722 /home/carlos/code/rd_salesforce
+Passenger 5294 carlos  rtd    DIR                7,0     1024       2 /
+Passenger 5294 carlos  txt    REG                7,0 13863285  298013 /home/carlos/.passenger/standalone/4.0.25/support-x86_64-linux/agents/PassengerHelperAgent
+Passenger 5294 carlos  mem    REG                7,0    52120 2113583 /lib/x86_64-linux-gnu/libnss_files-2.15.so
+Passenger 5294 carlos  mem    REG                7,0    47680 2113591 /lib/x86_64-linux-gnu/libnss_nis-2.15.so
+Passenger 5294 carlos  mem    REG                7,0    97248 2113607 /lib/x86_64-linux-gnu/libnsl-2.15.so
+Passenger 5294 carlos  mem    REG                7,0    35680 2113579 /lib/x86_64-linux-gnu/libnss_compat-2.15.so
+Passenger 5294 carlos  mem    REG                7,0  1815224 2113575 /lib/x86_64-linux-gnu/libc-2.15.so
+Passenger 5294 carlos  mem    REG                7,0    88384  205964 /lib/x86_64-linux-gnu/libgcc_s.so.1
+Passenger 5294 carlos  mem    REG                7,0  1030512 2113597 /lib/x86_64-linux-gnu/libm-2.15.so
+Passenger 5294 carlos  mem    REG                7,0   962656   17860 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+Passenger 5294 carlos  mem    REG                7,0    31752 2113589 /lib/x86_64-linux-gnu/librt-2.15.so
+Passenger 5294 carlos  mem    REG                7,0   135366 2113593 /lib/x86_64-linux-gnu/libpthread-2.15.so
+Passenger 5294 carlos  mem    REG                7,0   149280 2113599 /lib/x86_64-linux-gnu/ld-2.15.so
+Passenger 5294 carlos    0r   CHR                1,3      0t0    5788 /dev/null
+Passenger 5294 carlos    1w  FIFO                0,8      0t0   43557 pipe
+Passenger 5294 carlos    2w  FIFO                0,8      0t0   43557 pipe
+Passenger 5294 carlos    3u  unix 0x0000000000000000      0t0   43126 socket
+Passenger 5294 carlos    5w  FIFO                0,8      0t0   43557 pipe
+Passenger 5294 carlos    8u  0000                0,9        0    5763 anon_inode
+Passenger 5294 carlos    9u  0000                0,9        0    5763 anon_inode
+Passenger 5294 carlos   10u  0000                0,9        0    5763 anon_inode
+Passenger 5294 carlos   11u  0000                0,9        0    5763 anon_inode
+Passenger 5294 carlos   12u  0000                0,9        0    5763 anon_inode
+Passenger 5294 carlos   13r  FIFO                0,8      0t0   42754 pipe
+Passenger 5294 carlos   14w  FIFO                0,8      0t0   42754 pipe
+Passenger 5294 carlos   15u  unix 0x0000000000000000      0t0   42755 /tmp/passenger.1.0.5196/generation-0/request
+Passenger 5294 carlos   16u  unix 0x0000000000000000      0t0   42756 /tmp/passenger.1.0.5196/generation-0/helper_admin
+Passenger 5294 carlos   17r   CHR                1,9      0t0    5793 /dev/urandom
+Passenger 5294 carlos   18r   CHR                1,9      0t0    5793 /dev/urandom
+Passenger 5294 carlos   20u  unix 0x0000000000000000      0t0   42869 /tmp/passenger.1.0.5196/generation-0/request
+Passenger 5294 carlos   21u  unix 0x0000000000000000      0t0   42881 /tmp/passenger.1.0.5196/generation-0/request
+--------------------------------------
+[ pid=5294 ] Dumping a more detailed backtrace with crash-watch...
+Crash-watch is not installed. Please install it with 'gem install crash-watch' or download it from https://github.com/FooBarWidget/crash-watch.
+2015/04/09 22:03:08 [error] 5216#0: *12 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: _, request: "GET /salesforce HTTP/1.1", upstream: "passenger:/tmp/passenger.1.0.5196/generation-0/request:", host: "localhost:3000", referrer: "http://localhost:3000/"
+[ 2015-04-09 22:03:08.3131 5197/7f67b3d8c700 agents/Watchdog/AgentWatcher.cpp:96 ]: Phusion Passenger helper agent (pid=5294) crashed with signal SIGABRT, restarting it...
+[ 2015-04-09 22:03:08.3201 5397/7ffd777cd740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5196/generation-0/request
+[ 2015-04-09 22:03:11.3407 5397/7ffd776e7700 Pool2/Spawner.h:796 ]: [App 5421 stdout] 
+[ 2015-04-09 22:03:17.3093 5397/7ffd776e7700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-04-09 22:03:17.3099 5397/7ffd755d5700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+uninitialized constant OmniauthDemo (NameError)
+  /home/carlos/code/rd_salesforce/config/initializers/secret_token.rb:9:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/carlos/code/rd_salesforce/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-04-09 22:04:44.7968 5397/7ffd776e7700 Pool2/Spawner.h:796 ]: [App 5470 stdout] 
+[ 2015-04-09 22:04:50.7435 5397/7ffd776e7700 Pool2/Implementation.cpp:849 ]: Could not spawn process for group /home/carlos/code/rd_salesforce#default: An error occured while starting up the preloader.
+     in 'void Passenger::ApplicationPool2::SmartSpawner::handleErrorResponse(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:459)
+     in 'std::string Passenger::ApplicationPool2::SmartSpawner::negotiatePreloaderStartup(Passenger::ApplicationPool2::SmartSpawner::StartupDetails&)' (SmartSpawner.h:570)
+     in 'void Passenger::ApplicationPool2::SmartSpawner::startPreloader()' (SmartSpawner.h:210)
+     in 'virtual Passenger::ApplicationPool2::ProcessPtr Passenger::ApplicationPool2::SmartSpawner::spawn(const Passenger::ApplicationPool2::Options&)' (SmartSpawner.h:756)
+     in 'void Passenger::ApplicationPool2::Group::spawnThreadRealMain(const Passenger::ApplicationPool2::SpawnerPtr&, const Passenger::ApplicationPool2::Options&, unsigned int)' (Implementation.cpp:782)
+
+[ 2015-04-09 22:04:50.7441 5397/7ffd755d5700 agents/HelperAgent/RequestHandler.h:1997 ]: [Client 20] Cannot checkout session.
+Error page:
+uninitialized constant OmniauthDemo (NameError)
+  /home/carlos/code/rd_salesforce/config/initializers/session_store.rb:3:in `<top (required)>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:588:in `block (2 levels) in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/engine.rb:587:in `block in <class:Engine>'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:30:in `run'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `each'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/application.rb:136:in `initialize!'
+  /var/lib/gems/1.9.1/gems/railties-3.2.8/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  /home/carlos/code/rd_salesforce/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `instance_eval'
+  /var/lib/gems/1.9.1/gems/rack-1.4.5/lib/rack/builder.rb:51:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `eval'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:105:in `preload_app'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:150:in `<module:App>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:29:in `<module:PhusionPassenger>'
+  /var/lib/gems/1.9.1/gems/passenger-4.0.25/helper-scripts/rack-preloader.rb:28:in `<main>'
+
+[ 2015-04-09 22:05:35.7707 5397/7ffd776e7700 Pool2/Spawner.h:796 ]: [App 5503 stdout] 
+[ 2015-04-09 22:05:41.9181 5397/7ffd776a6700 Pool2/Spawner.h:160 ]: [App 5503 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-04-09 22:05:41.9184 5397/7ffd776a6700 Pool2/Spawner.h:160 ]: [App 5503 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-04-09 22:05:41.9185 5397/7ffd776a6700 Pool2/Spawner.h:160 ]: [App 5503 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-04-09 22:05:41.9185 5397/7ffd776a6700 Pool2/Spawner.h:160 ]: [App 5503 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-04-09 22:05:41.9186 5397/7ffd776a6700 Pool2/Spawner.h:160 ]: [App 5503 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-04-09 22:05:41.9187 5397/7ffd776a6700 Pool2/Spawner.h:160 ]: [App 5503 stderr] 
+[ 2015-04-09 22:05:41.9188 5397/7ffd776a6700 Pool2/Spawner.h:160 ]: [App 5503 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-04-09 22:05:41.9189 5397/7ffd776a6700 Pool2/Spawner.h:152 ]: [App 5503 stderr] 
+[ 2015-04-09 22:05:42.1471 5397/7ffd776e7700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 5503, listening on unix:/tmp/passenger.1.0.5196/generation-0/backends/preloader.5503
+[ 2015-04-09 22:23:18.6481 6233/7f957d6fb740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xMXBjcGZqL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.11pcpfj/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '6232', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-04-09 22:23:18.6907 6236/7f6c764d2740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.6232/generation-0/request
+[ 2015-04-09 22:23:18.7033 6241/7fe3acf13740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.6232/generation-0/logging
+[ 2015-04-09 22:23:18.7051 6233/7f957d6fb740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-04-09 22:23:23.9542 6236/7f6c763ec700 Pool2/Spawner.h:796 ]: [App 6299 stdout] 
+[ 2015-04-09 22:23:31.9405 6236/7f6c763ab700 Pool2/Spawner.h:160 ]: [App 6299 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-04-09 22:23:31.9407 6236/7f6c763ab700 Pool2/Spawner.h:160 ]: [App 6299 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-04-09 22:23:31.9407 6236/7f6c763ab700 Pool2/Spawner.h:160 ]: [App 6299 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-04-09 22:23:31.9408 6236/7f6c763ab700 Pool2/Spawner.h:160 ]: [App 6299 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-04-09 22:23:31.9408 6236/7f6c763ab700 Pool2/Spawner.h:160 ]: [App 6299 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-04-09 22:23:31.9409 6236/7f6c763ab700 Pool2/Spawner.h:160 ]: [App 6299 stderr] 
+[ 2015-04-09 22:23:31.9410 6236/7f6c763ab700 Pool2/Spawner.h:160 ]: [App 6299 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-04-09 22:23:31.9410 6236/7f6c763ab700 Pool2/Spawner.h:152 ]: [App 6299 stderr] 
+[ 2015-04-09 22:23:32.2894 6236/7f6c763ec700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 6299, listening on unix:/tmp/passenger.1.0.6232/generation-0/backends/preloader.6299
+[ 2015-04-11 16:40:52.6766 5164/7fe98d80a740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xdm9vbWFlL3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1voomae/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '5163', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-04-11 16:40:52.7370 5167/7f2340d4f740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.5163/generation-0/request
+[ 2015-04-11 16:40:52.7790 5175/7f81614b4740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.5163/generation-0/logging
+[ 2015-04-11 16:40:52.7793 5164/7fe98d80a740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-04-11 16:41:02.9181 5167/7f2340c8a700 Pool2/Spawner.h:796 ]: [App 5222 stdout] 
+[ 2015-04-11 16:41:13.9730 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-04-11 16:41:13.9733 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-04-11 16:41:13.9734 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-04-11 16:41:13.9735 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-04-11 16:41:13.9736 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-04-11 16:41:13.9737 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr] 
+[ 2015-04-11 16:41:13.9738 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-04-11 16:41:13.9740 5167/7f2340c49700 Pool2/Spawner.h:160 ]: [App 5222 stderr] 
+[ 2015-04-11 16:41:14.3141 5167/7f2340c8a700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 5222, listening on unix:/tmp/passenger.1.0.5163/generation-0/backends/preloader.5222
+[ 2015-04-11 18:20:59.8031 7711/7fb9299ea740 agents/Watchdog/Main.cpp:574 ]: Options: { 'analytics_log_user' => 'carlos', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS50OGEzbWIvdGVtcF9kaXJfdG91Y2hlci5waWQ=', 'default_group' => 'carlos', 'default_python' => 'python', 'default_ruby' => '/usr/bin/ruby1.9.1', 'default_user' => 'carlos', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.t8a3mb/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzAuMC4wLjA6MzAwMAA=', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.25', 'web_server_pid' => '7710', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '-1', 'web_server_worker_uid' => '-1' }
+[ 2015-04-11 18:20:59.8112 7714/7f9e32c63740 agents/HelperAgent/Main.cpp:619 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.7710/generation-0/request
+[ 2015-04-11 18:20:59.8301 7723/7f5fbad7e740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.7710/generation-0/logging
+[ 2015-04-11 18:20:59.8309 7711/7fb9299ea740 agents/Watchdog/Main.cpp:761 ]: All Phusion Passenger agents started!
+[ 2015-04-11 18:21:02.5026 7714/7f9e32b9e700 Pool2/Spawner.h:796 ]: [App 7758 stdout] 
+[ 2015-04-11 18:21:09.0457 7714/7f9e32b5d700 Pool2/Spawner.h:160 ]: [App 7758 stderr]         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+[ 2015-04-11 18:21:09.0459 7714/7f9e32b5d700 Pool2/Spawner.h:160 ]: [App 7758 stderr]         This poses a security threat. It is strongly recommended that you
+[ 2015-04-11 18:21:09.0460 7714/7f9e32b5d700 Pool2/Spawner.h:160 ]: [App 7758 stderr]         provide a secret to prevent exploits that may be possible from crafted
+[ 2015-04-11 18:21:09.0460 7714/7f9e32b5d700 Pool2/Spawner.h:160 ]: [App 7758 stderr]         cookies. This will not be supported in future versions of Rack, and
+[ 2015-04-11 18:21:09.0461 7714/7f9e32b5d700 Pool2/Spawner.h:160 ]: [App 7758 stderr]         future versions will even invalidate your existing user cookies.
+[ 2015-04-11 18:21:09.0461 7714/7f9e32b5d700 Pool2/Spawner.h:160 ]: [App 7758 stderr] 
+[ 2015-04-11 18:21:09.0462 7714/7f9e32b5d700 Pool2/Spawner.h:160 ]: [App 7758 stderr]         Called from: /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[ 2015-04-11 18:21:09.0463 7714/7f9e32b5d700 Pool2/Spawner.h:152 ]: [App 7758 stderr] 
+[ 2015-04-11 18:21:09.2808 7714/7f9e32b9e700 Pool2/SmartSpawner.h:305 ]: Preloader for /home/carlos/code/rd_salesforce started on PID 7758, listening on unix:/tmp/passenger.1.0.7710/generation-0/backends/preloader.7758
